@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subodh Kumar — Content Strategist & Visual Designer</title>
+  <meta name="description" content="I create visuals that make brands get remembered. Video editing, motion graphics & SaaS edits for brands, creators and tech businesses. Book a call." />
+  <meta name="author" content="Subodh Kumar" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Subodh Kumar — Content Strategist & Visual Designer" />
+  <meta property="og:description" content="Good brands get seen. Great brands get remembered. I create visuals that make that happen." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Subodh Kumar — Content Strategist & Visual Designer" />
+  <meta name="twitter:description" content="Good brands get seen. Great brands get remembered. I create visuals that make that happen." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050505'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='38' font-weight='800' fill='%23c0392b' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Calendly -->
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- scroll progress + custom cursor -->
+<div class="progress" id="progress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- lightbox -->
+<div class="lb" id="lb" aria-hidden="true">
+  <button class="lb__close" aria-label="Close">&times;</button>
+  <button class="lb__nav lb__prev" aria-label="Previous">&larr;</button>
+  <div class="lb__stage" id="lbStage"></div>
+  <button class="lb__nav lb__next" aria-label="Next">&rarr;</button>
+  <div class="lb__counter" id="lbCounter"></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__logo">Subodh Kumar<span class="nav__dot">.</span></a>
+    <div class="nav__links">
+      <a href="#services">What I Do</a>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <button class="btn btn--primary nav__cta" data-calendly>BOOK A CALL</button>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="navMobile">
+    <a href="#services">What I Do</a>
+    <a href="#process">Process</a>
+    <a href="#work">Work</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#pricing">Pricing</a>
+    <button class="btn btn--primary" data-calendly>BOOK A CALL</button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__noise" data-parallax="0.18"></div>
+  <div class="porb porb--red porb--xl p-tr" data-parallax="0.35"></div>
+  <div class="porb porb--deep porb--lg p-bl" data-parallax="-0.28"></div>
+  <div class="container hero__inner">
+    <div class="hero__left">
+      <div class="hero__badge"><span class="hero__star">★</span> SUBODH KUMAR · VISUAL DESIGNER</div>
+      <h1 class="hero__title">Good brands get seen.<br />Great brands <span class="grad">get remembered.</span></h1>
+      <p class="hero__sub"><span class="hero__sub-strong">I create visuals that make that happen.</span> Video editing, motion graphics and SaaS edits for brands, creators and tech businesses.</p>
+
+      <div class="hero__services" id="heroServices">
+        <button class="hsvc is-active" data-svc="0">
+          <span class="hsvc__title">VIDEO EDITING</span>
+          <span class="hsvc__desc">Reels, YouTube, Ads &amp; more</span>
+        </button>
+        <button class="hsvc" data-svc="1">
+          <span class="hsvc__title">MOTION GRAPHICS</span>
+          <span class="hsvc__desc">Animations that explain, engage &amp; convert</span>
+        </button>
+        <button class="hsvc" data-svc="2">
+          <span class="hsvc__title">SaaS EDITING</span>
+          <span class="hsvc__desc">Clean, UI-focused edits for SaaS &amp; tech brands</span>
+        </button>
+      </div>
+
+      <div class="hero__cta">
+        <button class="btn btn--primary btn--lg" data-calendly data-magnetic>BOOK A CALL <span class="arr">&rarr;</span></button>
+        <a href="#work" class="btn btn--ghost btn--lg">SEE MY WORK <span class="arr">&darr;</span></a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><div class="stat__num" data-count="3" data-suffix="+ Yrs">3+ Yrs</div><div class="stat__label">EXPERIENCE</div></div>
+        <div class="stat"><div class="stat__num" data-count="6">6</div><div class="stat__label">CORE SERVICES</div></div>
+        <div class="stat"><div class="stat__num" data-count="100" data-suffix="%">100%</div><div class="stat__label">CUSTOM WORK</div></div>
+      </div>
+    </div>
+    <div class="hero__right">
+      <div class="reelwall" id="reelwall">
+        <div class="reelwall__col" data-dir="up" id="reelColA"></div>
+        <div class="reelwall__col reelwall__col--offset" data-dir="down" id="reelColB"></div>
+      </div>
+      <div class="reelwall__fade reelwall__fade--top"></div>
+      <div class="reelwall__fade reelwall__fade--bottom"></div>
+      <button class="calendly-badge" data-calendly>
+        <span class="calendly-badge__title">Schedule time with me</span>
+        <span class="calendly-badge__sub">powered by Calendly</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT I DO ============ -->
+<section class="section services" id="services">
+  <div class="porb porb--deep porb--xl p-tr" data-parallax="0.3"></div>
+  <div class="porb porb--red porb--md p-bl" data-parallax="-0.36"></div>
+  <div class="container">
+    <div class="sec-head sec-head--center reveal">
+      <div class="eyebrow">WHAT I DO</div>
+      <h2 class="sec-title">More Than Content.<br />A Growth Engine.</h2>
+      <p class="sec-lead">Everything you need to turn raw ideas into scroll-stopping visuals — under one roof.</p>
+    </div>
+    <div class="services__grid">
+      <article class="svc reveal" data-tilt>
+        <div class="svc__icon">▶</div>
+        <h3 class="svc__title">Social Media Reels &amp; Short Form Videos</h3>
+        <p class="svc__body">High-retention reels and shorts engineered to stop the scroll and drive saves, shares and follows.</p>
+      </article>
+      <article class="svc reveal" data-tilt>
+        <div class="svc__icon">⧉</div>
+        <h3 class="svc__title">YouTube Videos &amp; Long Form Editing</h3>
+        <p class="svc__body">Story-driven long-form edits with pacing, hooks and retention built in from the first frame.</p>
+      </article>
+      <article class="svc reveal" data-tilt>
+        <div class="svc__icon">✦</div>
+        <h3 class="svc__title">Motion Graphics &amp; Visual Effects</h3>
+        <p class="svc__body">Animations that explain, engage and convert — from kinetic text to full motion design systems.</p>
+      </article>
+      <article class="svc reveal" data-tilt>
+        <div class="svc__icon">▥</div>
+        <h3 class="svc__title">SaaS Product Videos &amp; UI/UX Edits</h3>
+        <p class="svc__body">Clean, UI-focused product walkthroughs and demos that make complex software feel effortless.</p>
+      </article>
+      <article class="svc reveal" data-tilt>
+        <div class="svc__icon">◎</div>
+        <h3 class="svc__title">Ad Campaigns &amp; Promotional Videos</h3>
+        <p class="svc__body">Performance-minded ad creative built to capture attention fast and move the metric that matters.</p>
+      </article>
+      <article class="svc reveal" data-tilt>
+        <div class="svc__icon">❝</div>
+        <h3 class="svc__title">Brand Storytelling Through Visuals</h3>
+        <p class="svc__body">Cohesive visual narratives that make your brand seen, felt and — most importantly — remembered.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section process" id="process">
+  <div class="porb porb--orange porb--lg p-cl" data-parallax="0.36"></div>
+  <div class="porb porb--deep porb--md p-tr" data-parallax="-0.3"></div>
+  <div class="container">
+    <div class="sec-head sec-head--center reveal">
+      <div class="eyebrow">THE CREATIVE WORKFLOW</div>
+      <h2 class="sec-title">How We Bring Your Vision To Life.</h2>
+      <p class="sec-lead">A simple, transparent process — from first call to final delivery.</p>
+    </div>
+    <div class="system__steps">
+      <article class="step reveal">
+        <div class="step__label">STEP 01</div>
+        <div class="step__tags"><span>CALL</span><span>VOICE NOTE</span><span>BRIEF</span></div>
+        <h3 class="step__title">Discovery &amp; Strategy</h3>
+        <p class="step__body">We start with a quick call, voice note, or project brief to understand your goals. Together, we define the creative direction, content requirements, and timeline before production begins.</p>
+      </article>
+      <article class="step reveal">
+        <div class="step__label">STEP 02</div>
+        <div class="step__tags"><span>EDITING</span><span>MOTION</span><span>FEEDBACK</span></div>
+        <h3 class="step__title">Create &amp; Refine</h3>
+        <p class="step__body">Using editing, motion graphics, and storytelling, I transform raw ideas into engaging content. Every detail is refined through feedback and revisions until it aligns perfectly with your vision.</p>
+      </article>
+      <article class="step reveal">
+        <div class="step__label">STEP 03</div>
+        <div class="step__tags"><span>EXPORT</span><span>QC</span><span>DELIVER</span></div>
+        <h3 class="step__title">Deliver &amp; Optimize</h3>
+        <p class="step__body">Final files are exported, quality-checked, and delivered in the required formats. Your content arrives ready to publish, perform, and make a lasting impression.</p>
+      </article>
+    </div>
+    <div class="system__output reveal">
+      <div class="eyebrow eyebrow--sm">FINAL OUTPUT</div>
+      <div class="output__grid" id="outputGrid"></div>
+      <p class="output__caption">This is what your audience sees.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES (hover-image list) ============ -->
+<section class="section capabilities" id="capabilities">
+  <div class="porb porb--orange porb--lg p-tl" data-parallax="0.36"></div>
+  <div class="porb porb--deep porb--md p-br" data-parallax="-0.3"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="eyebrow">WHAT I DO</div>
+      <h2 class="section__title">Services that move brands forward</h2>
+    </div>
+
+    <div class="ilist" id="ilist">
+      <a class="irow reveal" data-img="assets/posters/gym.jpg" data-cat="video" href="#work">
+        <span class="irow__idx">01</span>
+        <span class="irow__title">Video Editing</span>
+        <span class="irow__meta">Reels · YouTube · Ads</span>
+        <span class="irow__arrow">&rarr;</span>
+      </a>
+      <a class="irow reveal" data-img="assets/posters/brand-intro.jpg" data-cat="motion" href="#work">
+        <span class="irow__idx">02</span>
+        <span class="irow__title">Motion Graphics</span>
+        <span class="irow__meta">Intros · Animation · VFX</span>
+        <span class="irow__arrow">&rarr;</span>
+      </a>
+      <a class="irow reveal" data-img="assets/posters/portfolio-saas.jpg" data-cat="saas" href="#work">
+        <span class="irow__idx">03</span>
+        <span class="irow__title">SaaS Product Edits</span>
+        <span class="irow__meta">Demos · Walkthroughs · Promos</span>
+        <span class="irow__arrow">&rarr;</span>
+      </a>
+      <a class="irow reveal" data-img="work/social media design/opal.jpg" data-cat="social" href="#work">
+        <span class="irow__idx">04</span>
+        <span class="irow__title">Social Media Design</span>
+        <span class="irow__meta">Posts · Carousels · Stories</span>
+        <span class="irow__arrow">&rarr;</span>
+      </a>
+      <a class="irow reveal" data-img="work/fashion brand project/outfit 13/1.jpg" data-cat="fashion" href="#work">
+        <span class="irow__idx">05</span>
+        <span class="irow__title">Fashion Brand Projects</span>
+        <span class="irow__meta">Lookbooks · Reels · Campaigns</span>
+        <span class="irow__arrow">&rarr;</span>
+      </a>
+
+      <div class="ifollow" id="ifollow"><img id="ifollowImg" alt="" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="section work" id="work">
+  <div class="porb porb--red porb--lg p-tr" data-parallax="0.32"></div>
+  <div class="porb porb--deep porb--xl p-bl" data-parallax="-0.28"></div>
+  <div class="container">
+    <div class="sec-head sec-head--center reveal">
+      <div class="eyebrow">OUR WORK</div>
+      <h2 class="sec-title">Creative Work Built With Purpose.</h2>
+      <p class="sec-lead">A look across the formats I design and edit every week.</p>
+    </div>
+    <div class="work__cats">
+      <button class="wcat is-active" data-cat="all">All</button>
+      <button class="wcat" data-cat="social">Social Media Designs</button>
+      <button class="wcat" data-cat="carousel">Carousel Designs</button>
+      <button class="wcat" data-cat="motion">Motion Graphics</button>
+      <button class="wcat" data-cat="video">Video Editing</button>
+      <button class="wcat" data-cat="fashion">Fashion Brand Projects</button>
+    </div>
+    <div class="work__grid" id="workGrid"></div>
+    <p class="work__foot">More work added every week — <button class="link-inline" data-calendly>ask for the full reel</button></p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section testimonials" id="testimonials">
+  <div class="testimonials__noise" data-parallax="0.16"></div>
+  <div class="porb porb--orange porb--lg p-cl" data-parallax="0.4"></div>
+  <div class="porb porb--deep porb--md p-tr" data-parallax="-0.3"></div>
+  <div class="container">
+    <div class="sec-head sec-head--center reveal">
+      <div class="eyebrow">TESTIMONIALS</div>
+      <h2 class="sec-title">What Clients Say</h2>
+      <p class="sec-lead">Trusted by creators, founders and scaling brands.</p>
+    </div>
+    <div class="tcarousel">
+      <button class="tcarousel__nav tcarousel__nav--prev" id="tPrev" aria-label="Previous">&larr;</button>
+      <div class="tcarousel__viewport">
+        <div class="tcarousel__track" id="tTrack">
+
+          <article class="tcard">
+            <div class="tcard__body tcard__body--full">
+              <div class="tcard__quote">"Subodh turned a rough pile of footage into a reel that actually performed. Fast, sharp, and zero hand-holding needed."</div>
+              <div class="tcard__person"><span class="tcard__avatar">A</span><div><h3 class="tcard__name">Creator Client</h3><span class="tcard__role">Short-Form Content</span></div></div>
+            </div>
+          </article>
+
+          <article class="tcard">
+            <div class="tcard__body tcard__body--full">
+              <div class="tcard__quote">"The motion graphics made our SaaS demo finally make sense. Clean, on-brand, and delivered on time."</div>
+              <div class="tcard__person"><span class="tcard__avatar">S</span><div><h3 class="tcard__name">SaaS Founder</h3><span class="tcard__role">Product Video</span></div></div>
+            </div>
+          </article>
+
+          <article class="tcard">
+            <div class="tcard__body tcard__body--full">
+              <div class="tcard__soon">SCREENSHOTS COMING SOON</div>
+              <div class="tcard__quote">Client screenshots, details and photos are being added here.</div>
+              <div class="tcard__person"><span class="tcard__avatar">+</span><div><h3 class="tcard__name">Your Brand Next</h3><span class="tcard__role">Let's build it</span></div></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <button class="tcarousel__nav tcarousel__nav--next" id="tNext" aria-label="Next">&rarr;</button>
+    </div>
+    <div class="tcarousel__dots" id="tDots"></div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section class="section founder" id="founder">
+  <div class="founder__noise" data-parallax="0.16"></div>
+  <div class="porb porb--red porb--lg p-br" data-parallax="-0.32"></div>
+  <div class="porb porb--deep porb--md p-tl" data-parallax="0.42"></div>
+  <div class="container">
+    <div class="sec-head sec-head--center reveal">
+      <div class="eyebrow">FOUNDER'S PERSPECTIVE</div>
+      <h2 class="sec-title">Creative Work Built<br />With Purpose And Precision.</h2>
+    </div>
+    <div class="founder__card reveal">
+      <div class="founder__media">
+        <div class="founder__photo" aria-label="Subodh Kumar">
+          <img class="founder__img" src="work/pic.jpeg" alt="Subodh Kumar" loading="lazy" />
+          <span class="founder__ring"></span>
+        </div>
+      </div>
+      <div class="founder__body">
+        <div class="eyebrow eyebrow--sm">FROM THE FOUNDER</div>
+        <h3 class="founder__name">Subodh Kumar</h3>
+        <div class="founder__role">Content Strategist &amp; Visual Designer</div>
+        <p>3+ years in video editing, motion graphics, and content creation. Started as a freelancer and evolved into creating high-impact visual content for brands, creators, and SaaS businesses.</p>
+        <p>Focused on transforming ideas into engaging visuals that capture attention and leave a lasting impression.</p>
+        <blockquote class="founder__quote">"Good brands get seen.<br />Great brands get remembered."</blockquote>
+        <a href="#work" class="btn btn--ghost">View My Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="faq__noise" data-parallax="0.16"></div>
+  <div class="porb porb--orange porb--md p-cr" data-parallax="0.38"></div>
+  <div class="container container--narrow">
+    <div class="sec-head sec-head--center reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="sec-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq__list" id="faqList">
+      <div class="faqitem reveal">
+        <button class="faqitem__q" aria-expanded="false">What types of content do you create?<span class="faqitem__icon">+</span></button>
+        <div class="faqitem__a"><p>Short-form reels, long-form YouTube edits, motion graphics, SaaS product videos, ad creatives and full brand storytelling — across social, web and ads.</p></div>
+      </div>
+      <div class="faqitem reveal">
+        <button class="faqitem__q" aria-expanded="false">Does iPhone or basic footage work?<span class="faqitem__icon">+</span></button>
+        <div class="faqitem__a"><p>Absolutely. The device doesn't matter — what matters is the content and the value it delivers. I make it look premium regardless of the source.</p></div>
+      </div>
+      <div class="faqitem reveal">
+        <button class="faqitem__q" aria-expanded="false">How do revisions work?<span class="faqitem__icon">+</span></button>
+        <div class="faqitem__a"><p>Every project includes feedback rounds. We refine through revisions until the content aligns perfectly with your vision before final delivery.</p></div>
+      </div>
+      <div class="faqitem reveal">
+        <button class="faqitem__q" aria-expanded="false">Do you work with businesses or individual creators?<span class="faqitem__icon">+</span></button>
+        <div class="faqitem__a"><p>Both. I work with solo creators, personal brands, coaches, agencies, and SaaS &amp; tech businesses of all sizes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section pricing" id="pricing">
+  <div class="pricing__noise" data-parallax="0.16"></div>
+  <div class="porb porb--red porb--xl p-tl" data-parallax="0.34"></div>
+  <div class="porb porb--orange porb--md p-br" data-parallax="-0.3"></div>
+  <div class="container">
+    <div class="sec-head sec-head--center reveal">
+      <div class="eyebrow">PRICING</div>
+      <h2 class="sec-title">Simple, Project-Based Pricing.</h2>
+      <p class="sec-lead">Every brand is different — so every quote is custom. Here's where most projects start.</p>
+    </div>
+    <div class="pricing__grid">
+      <article class="ptier reveal" data-tilt>
+        <div class="ptier__name">Starter</div>
+        <div class="ptier__price">Per Reel</div>
+        <p class="ptier__desc">Single short-form reel or shorts edit. Perfect for testing the workflow.</p>
+        <ul class="ptier__list">
+          <li>1 short-form video</li>
+          <li>Hooks, captions &amp; sound design</li>
+          <li>2 revision rounds</li>
+        </ul>
+        <button class="btn btn--ghost ptier__btn" data-calendly>Get a quote</button>
+      </article>
+      <article class="ptier ptier--featured reveal" data-tilt>
+        <div class="ptier__badge">MOST POPULAR</div>
+        <div class="ptier__name">Content Engine</div>
+        <div class="ptier__price">Monthly Retainer</div>
+        <p class="ptier__desc">A consistent pipeline of reels, edits &amp; motion graphics every month.</p>
+        <ul class="ptier__list">
+          <li>8–12 videos / month</li>
+          <li>Motion graphics included</li>
+          <li>Priority turnaround</li>
+          <li>Ongoing strategy</li>
+        </ul>
+        <button class="btn btn--primary ptier__btn" data-calendly>Book a call</button>
+      </article>
+      <article class="ptier reveal" data-tilt>
+        <div class="ptier__name">Custom</div>
+        <div class="ptier__price">Let's Talk</div>
+        <p class="ptier__desc">Campaigns, SaaS product videos, or full brand content systems.</p>
+        <ul class="ptier__list">
+          <li>Scoped to your goals</li>
+          <li>SaaS &amp; ad campaigns</li>
+          <li>Dedicated workflow</li>
+        </ul>
+        <button class="btn btn--ghost ptier__btn" data-calendly>Get a quote</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section cta" id="cta">
+  <div class="cta__noise" data-parallax="0.16"></div>
+  <div class="porb porb--red porb--xl p-cl" data-parallax="0.4"></div>
+  <div class="porb porb--orange porb--lg p-cr" data-parallax="-0.34"></div>
+  <div class="container container--narrow cta__inner reveal">
+    <h2 class="cta__title">Have A Project <span class="grad">In Mind?</span></h2>
+    <p class="cta__sub">Let's explore how great content can help bring it to life.</p>
+    <button class="btn btn--primary btn--lg" data-calendly data-magnetic>BOOK A CALL <span class="arr">&rarr;</span></button>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo">Subodh Kumar<span class="nav__dot">.</span></div>
+      <p class="footer__tag">Content Strategist &amp; Visual Designer.</p>
+    </div>
+    <div class="footer__links">
+      <a href="#services">What I Do</a>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <button class="footer__linkbtn" data-calendly>Contact</button>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Subodh Kumar. All rights reserved.</span>
+    <span>Crafted with purpose &amp; precision.</span>
+  </div>
+</footer>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/media.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
